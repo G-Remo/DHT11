@@ -5,7 +5,6 @@ uint8_t Humidite;
 float Temperature;
 
 void init_dht11() {
-  Serial.begin(115200);
   pinMode( pin_dht11, OUTPUT); 
   digitalWrite( pin_dht11, HIGH);
   time_dht11 = millis();
@@ -47,8 +46,8 @@ bool dht11( bool fahrenheit = false, bool serial_print = true){
     }
   }
 
-  pinMode(pin_dht11,OUTPUT); 
-  digitalWrite(pin_dht11,HIGH);
+  pinMode( pin_dht11, OUTPUT); 
+  digitalWrite( pin_dht11, HIGH);
 
   if (DHTData[4] == (DHTData[0]+DHTData[1]+DHTData[2]+DHTData[3])){
     Humidite = DHTData[0];
