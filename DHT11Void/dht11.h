@@ -1,10 +1,10 @@
-const uint8_t pin_dht11 = 14;
-
+uint8_t pin_dht11;
 uint32_t time_dht11;
 uint8_t Humidite; 
 float Temperature;
 
-void init_dht11() {
+void init_dht11(uint8_t _pin) {
+  pin_dht11 = _pin;
   pinMode( pin_dht11, OUTPUT); 
   digitalWrite( pin_dht11, HIGH);
   time_dht11 = millis();
