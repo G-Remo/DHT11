@@ -1,11 +1,8 @@
-# DHT11-Arduino-Void
-Use of the DHT11 temprature sensor in Arduino IDE without a library
+C'était pour tester le bouton fork.
 
-********** Global Variables *************
-Humidity 
-Temp
-TempComma
-DHTError
+Si dht11() return true, uint8_t Humidite et float Temperature sont misent à jours.
 
+bool dht11( bool fahrenheit = false, bool serial_print = true)
+uint8_t Humidite; 
+float Temperature;
 
-Call the sensor with DHT11();
